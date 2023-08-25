@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Aug 2023 21:20:55 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>/posts/helloworld/</link>
+      <pubDate>Thu, 24 Aug 2023 21:20:55 +0800</pubDate>
+      
+      <guid>/posts/helloworld/</guid>
+      <description> Blogging for security relates stuff (GitPage + Hugo)
+Reason for blogging A trigger to do sth (as I need to write sth on the blog) Making progress Goal-driven Conscious Reason for Hugo Easier to setup (compiled binary is provided) Theme (Hexo &amp;amp; Hugo) hexo Cactus hugo YinYang Poison </description>
+    </item>
+    
+  </channel>
+</rss>
