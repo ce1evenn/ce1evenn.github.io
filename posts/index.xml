@@ -6,14 +6,25 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Aug 2023 21:20:55 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 01:52:00 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Journey</title>
+      <link>/posts/journey/</link>
+      <pubDate>Thu, 31 Aug 2023 01:52:00 +0800</pubDate>
+      
+      <guid>/posts/journey/</guid>
+      <description>2023 27 Aug - 30 Aug Ethernaut 1-9
+31 Aug - 1 Sep Do nothing
+2 Sep Back to Ethernaut</description>
+    </item>
+    
     <item>
       <title>Hello World!</title>
       <link>/posts/helloworld/</link>
       <pubDate>Thu, 24 Aug 2023 21:20:55 +0800</pubDate>
       
       <guid>/posts/helloworld/</guid>
-      <description> Blogging for security relates stuff (GitPage + Hugo)
+      <description> For blogging security relates stuff (GitPage + Hugo)
 Reason for blogging A trigger to do sth (as I need to write sth on the blog) Making progress Goal-driven Conscious Reason for Hugo Easier to setup (compiled binary is provided) Theme (Hexo &amp;amp; Hugo) hexo Cactus hugo YinYang Poison </description>
     </item>
     
