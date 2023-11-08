@@ -6,7 +6,23 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Aug 2023 01:52:00 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 01:39:58 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nas Docker Rss Subscription Service</title>
+      <link>/posts/nas-docker-rss-subscription-service/</link>
+      <pubDate>Thu, 09 Nov 2023 01:39:58 +0800</pubDate>
+      
+      <guid>/posts/nas-docker-rss-subscription-service/</guid>
+      <description>For me, Freshrss is better.
+I plan to test them one by one, but stop at Freshrss as I&amp;rsquo;m satisfied with it.
+Planned testing sequence in order: Miniflux -&amp;gt; Freshrss -&amp;gt; Tiny tiny rss
+My requirement:
+Subscribe &amp;gt; 100 feeds Use on PC &amp;amp; mobile Feeds are manageable (feeds with error, remove feeds) Comparison:
+Miniflux
+can suscribe &amp;gt;100 feeds Easy to use on both PC &amp;amp; mobile Freshrss
+can subscribe &amp;gt;100 feeds Easy to use on both PC &amp;amp; mobile Better subscription mangement (e.</description>
+    </item>
+    
     <item>
       <title>Journey</title>
       <link>/posts/journey/</link>
@@ -17,7 +33,10 @@
 31 Aug - 1 Sep Do nothing
 2 Sep Back to Ethernaut (actually do nth, just take a look&amp;hellip;.)
 3 Sep - 4 Sep Do nth
-5 Sep Back to Ethernaut (King&amp;hellip;.)</description>
+5 Sep Back to Ethernaut (King&amp;hellip;.)
+10 Sep Ethernaut (Reentrance)
+14 Sep Ethernaut (Elevator)
+21 Sep Ethernaut (Privacy)</description>
     </item>
     
     <item>
