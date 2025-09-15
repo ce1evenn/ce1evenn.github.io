@@ -74,7 +74,7 @@
 <meta property="og:url" content="/" />
 
 
-<meta property="og:updated_time" content="2025-08-14T17:03:56Z" />
+<meta property="og:updated_time" content="2025-09-12T14:26:27Z" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='/sitemap.xml' />
@@ -233,7 +233,11 @@
                         </li>
                         
                             <li class="bullet">
-                                <a href="/posts/killercoda-cka/">Killercoda CKA</a>
+                                <a href="/posts/killercoda-cka-by-alexis-carbillet/">Killercoda Cka by Alexis Carbillet</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/killercoda-cka-by-kim-w%C3%BCstkamp/">Killercode Cka by Kim Wüstkamp</a>
                             </li>
                         
                             <li class="bullet">
@@ -308,15 +312,135 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     <article class="post">
         <div class="info">
   <h1 class="post-title">
-    <a href="/posts/killercoda-cka/">Killercoda CKA</a>
+    <a href="/posts/killercoda-cka-by-alexis-carbillet/">Killercoda Cka by Alexis Carbillet</a>
   </h1>
 
   <div class="headline">
     <div>
       
       
-      <time datetime=" 2025-08-14T17:03:56Z" class="post-date">
-        August 14, 2025
+      <time datetime=" 2025-09-12T14:26:27Z" class="post-date">
+        September 12, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>8 mins read</span>
+      </span>
+    </div>
+
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <blockquote>
+<p>CKA Preparation</p>
+<ul>
+<li>Lab: CKA by Alexis Carbillet</li>
+<li>URL: <a href="https://killercoda.com/alexis-carbillet/course/CKA" target="_blank">https://killercoda.com/alexis-carbillet/course/CKA</a></li>
+</ul></blockquote>
+<h2 id="1-cka-practice-configmaps-and-secrets">1. CKA Practice: ConfigMaps and Secrets</h2>
+<ol>
+<li>Create a ConfigMap and Secret</li>
+</ol>
+<ul>
+<li>Your application needs a database configuration and a password stored securely.
+<ul>
+<li>Create a ConfigMap named app-config with:
+<ul>
+<li>DB_HOST=localhost</li>
+<li>DB_PORT=3306</li>
+</ul>
+</li>
+<li>Create a Secret named db-secret with:
+<ul>
+<li>DB_PASSWORD=supersecret (base64 encoded automatically by kubectl)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e">#configmap</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">app-config</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">DB_HOST</span>: <span style="color:#e6db74">&#34;localhost&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">DB_PORT</span>: <span style="color:#e6db74">&#34;3306&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#secret</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Secret</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">db-secret</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">DB_PASSWORD</span>: <span style="color:#e6db74">&#34;c3VwZXJzZWNyZXQK&#34;</span> <span style="color:#75715e">#base64 encoded value &#39;supersecret&#39;</span>
+</span></span></code></pre></div><ol start="2">
+<li>Use ConfigMap and Secret in a Pod</li>
+</ol>
+<ul>
+<li>Create a Pod named app-pod using the nginx image.</li>
+<li>Inject the ConfigMap values as environment variables.</li>
+<li>Inject the Secret value as an environment variable.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">app-pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>: 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">containers</span>: 
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">app-pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">DB_HOST</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">valueFrom</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMapKeyRef</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">app-config</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">key</span>: <span style="color:#ae81ff">DB_HOST</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">DB_PORT</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">valueFrom</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMapKeyRef</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">app-config</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">key</span>: <span style="color:#ae81ff">DB_PORT</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">DB_SECRET</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">valueFrom</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">secretKeyRef</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">db-secret</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">key</span>: <span style="color:#ae81ff">DB_PASSWORD</span>
+</span></span></code></pre></div><h2 id="--lesson-learn">- Lesson learn</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>controlplane:/var/log$ k get pods    
+</span></span><span style="display:flex;"><span>NAME      READY   STATUS                       RESTARTS   AGE
+</span></span><span style="display:flex;"><span>app-pod   0/1     CreateContainerConfigError   <span style="color:#ae81ff">0</span>          4m43s
+</span></span></code></pre></div><p>for debugging this error &lsquo;CreateContainerConfigError&rsquo; by using <code>k describe pod app-pod</code></p>
+        
+        <div class="read-more-link">
+            <a href="/posts/killercoda-cka-by-alexis-carbillet/">Read More…</a>
+        </div>
+        
+        
+    </article>
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="/posts/killercoda-cka-by-kim-w%C3%BCstkamp/">Killercode Cka by Kim Wüstkamp</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-09-12T14:21:52Z" class="post-date">
+        September 12, 2025
       </time>
       
       <span> - </span>
@@ -342,9 +466,9 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
         <blockquote>
 <p>CKA Preparation</p>
 <ul>
-<li>Killer Shell CKA (k8s entry)</li>
+<li>Lab: Killer Shell CKA (Kim Wüstkamp)</li>
+<li>URL: <a href="https://killercoda.com/killer-shell-cka" target="_blank">https://killercoda.com/killer-shell-cka</a></li>
 </ul></blockquote>
-<h1 id="lab-killer-shell-cka">Lab: Killer Shell CKA</h1>
 <h2 id="1-playground">1. Playground</h2>
 <blockquote>
 <p>This playground will always have the same version as currently in the Linux Foundation Exam.</p></blockquote>
@@ -376,7 +500,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>Solution</p>
         
         <div class="read-more-link">
-            <a href="/posts/killercoda-cka/">Read More…</a>
+            <a href="/posts/killercoda-cka-by-kim-w%C3%BCstkamp/">Read More…</a>
         </div>
         
         
