@@ -239,7 +239,7 @@
                             </li>
                         
                             <li class="bullet">
-                                <a href="/posts/killercoda-cka-by-kim-w%C3%BCstkamp/">Killercode Cka by Kim Wüstkamp</a>
+                                <a href="/posts/killercoda-cka-by-kim-wu%CC%88stkamp/">Killercode Cka by Kim Wüstkamp</a>
                             </li>
                         
                             <li class="bullet">
@@ -415,7 +415,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">secretKeyRef</span>:
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">db-secret</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">key</span>: <span style="color:#ae81ff">DB_PASSWORD</span>
-</span></span></code></pre></div><h2 id="--lesson-learn">- Lesson learn</h2>
+</span></span></code></pre></div><h2 id="--lesson-learned">- Lesson learned</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>controlplane:/var/log$ k get pods    
 </span></span><span style="display:flex;"><span>NAME      READY   STATUS                       RESTARTS   AGE
 </span></span><span style="display:flex;"><span>app-pod   0/1     CreateContainerConfigError   <span style="color:#ae81ff">0</span>          4m43s
@@ -489,7 +489,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete deployment hpa-demo
 </span></span><span style="display:flex;"><span>kubectl delete service hpa-demo
 </span></span><span style="display:flex;"><span>kubectl delete hpa hpa-demo
-</span></span></code></pre></div><h2 id="--lesson-learn-1">- Lesson learn</h2>
+</span></span></code></pre></div><h2 id="--lesson-learned-1">- Lesson learned</h2>
 <ul>
 <li>the HPA requires metric server</li>
 <li>the lab environment missing metric server <code>k top node</code> also won&rsquo;t work.
@@ -608,7 +608,7 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
 </span></span><span style="display:flex;"><span>kubectl exec -n frontend neighbour -- wget -qO- --timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> http://web
 </span></span><span style="display:flex;"><span>kubectl run temp --rm -i --image<span style="color:#f92672">=</span>busybox -n frontend -- wget -qO- http://web
 </span></span></code></pre></div><hr>
-<h2 id="--lesson-learn-2">- Lesson-learn</h2>
+<h2 id="--lesson-learned-2">- Lesson learned</h2>
 <ul>
 <li>Service metaname matters, as it is part of the fqdn</li>
 </ul>
@@ -635,7 +635,7 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
 </span></span><span style="display:flex;"><span>NAME           STATUS   ROLES           AGE   VERSION
 </span></span><span style="display:flex;"><span>controlplane   Ready    control-plane   25d   v1.33.2
 </span></span><span style="display:flex;"><span>node01         Ready    &lt;none&gt;          25d   v1.33.2
-</span></span></code></pre></div><h2 id="--lesson-learn-3">- Lesson-learn</h2>
+</span></span></code></pre></div><h2 id="--lesson-learned-3">- Lesson learned</h2>
 <ul>
 <li>Drain a node for purposes below:
 <ul>
@@ -709,7 +709,7 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
 <li>Read Data from PV</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl exec -it pv-test-pod -- sh -c <span style="color:#e6db74">&#34;echo &#39;Hello from PV!&#39; &gt; /data/hello.txt&#34;</span>
-</span></span></code></pre></div><h2 id="--lesson-learn-4">- Lesson-learn</h2>
+</span></span></code></pre></div><h2 id="--lesson-learned-4">- Lesson learned</h2>
 <ul>
 <li>To list the contents of /mnt/data (mounted by your PersistentVolume), you need to attach that volume to a pod and then run a shell or command inside the pod.</li>
 </ul>
@@ -741,7 +741,7 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># OR if it&#39;s part of a deployment, update the deployment</span>
 </span></span><span style="display:flex;"><span>kubectl set image deployment/my-deployment my-container<span style="color:#f92672">=</span>nginx:1.21
-</span></span></code></pre></div><h2 id="--lesson-learn-5">- Lesson-learn</h2>
+</span></span></code></pre></div><h2 id="--lesson-learned-5">- Lesson learned</h2>
 <ul>
 <li>pod issues debugging, <code>k describe</code> &amp; <code>k logs</code></li>
 </ul>
@@ -963,7 +963,7 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
 <div class="footer">
     
 	    
-            <a class="previous-post" href="/posts/killercoda-cka-by-kim-w%C3%BCstkamp/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Killercode Cka by Kim Wüstkamp</a>
+            <a class="previous-post" href="/posts/killercoda-cka-by-kim-wu%CC%88stkamp/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Killercode Cka by Kim Wüstkamp</a>
         
 	    
     
@@ -980,17 +980,17 @@ from 1-5 steps, the HPA doesn&rsquo;t work at all, only 1 hpa-pod there for 10 m
       <nav id="TableOfContents">
   <ul>
     <li><a href="#1-cka-practice-configmaps-and-secrets">1. CKA Practice: ConfigMaps and Secrets</a></li>
-    <li><a href="#--lesson-learn">- Lesson learn</a></li>
+    <li><a href="#--lesson-learned">- Lesson learned</a></li>
     <li><a href="#2-cka-practice-horizontal-pod-autoscaler-hpa">2. CKA Practice: Horizontal Pod Autoscaler (HPA)</a></li>
-    <li><a href="#--lesson-learn-1">- Lesson learn</a></li>
+    <li><a href="#--lesson-learned-1">- Lesson learned</a></li>
     <li><a href="#3-cka-practice-network-policies-not-yet-done">3. CKA Practice: Network Policies (not yet done)</a></li>
-    <li><a href="#--lesson-learn-2">- Lesson-learn</a></li>
+    <li><a href="#--lesson-learned-2">- Lesson learned</a></li>
     <li><a href="#4-cka-practice-node-maintenance">4. CKA Practice: Node Maintenance</a></li>
-    <li><a href="#--lesson-learn-3">- Lesson-learn</a></li>
+    <li><a href="#--lesson-learned-3">- Lesson learned</a></li>
     <li><a href="#5-cka-practice-persistent-volumes-and-pvc">5. CKA Practice: Persistent Volumes and PVC</a></li>
-    <li><a href="#--lesson-learn-4">- Lesson-learn</a></li>
+    <li><a href="#--lesson-learned-4">- Lesson learned</a></li>
     <li><a href="#6-cka-practice-pod-debugging">6. CKA Practice: Pod Debugging</a></li>
-    <li><a href="#--lesson-learn-5">- Lesson-learn</a></li>
+    <li><a href="#--lesson-learned-5">- Lesson learned</a></li>
     <li><a href="#7-cka-practice-rbac-role-based-access-control">7. CKA Practice: RBAC (Role-Based Access Control)</a></li>
     <li><a href="#8-cka-practice-rolling-updates--rollbacks">8. CKA Practice: Rolling Updates &amp; Rollbacks</a></li>
     <li><a href="#9-cka-practice-service-not-routing-traffic">9. CKA Practice: Service Not Routing Traffic</a></li>
