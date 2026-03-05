@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Sep 2025 14:26:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Sep 2025 16:33:19 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Killercoda Cka by Chad M. Crowell</title>
+      <link>/posts/killercoda-cka-by-chad-m.-crowell/</link>
+      <pubDate>Wed, 17 Sep 2025 16:33:19 +0000</pubDate>
+      <guid>/posts/killercoda-cka-by-chad-m.-crowell/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;CKA Preparation&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lab: CKA Exercises by Chad M. Crowell&lt;/li&gt;&#xA;&lt;li&gt;URL: &lt;a href=&#34;https://killercoda.com/chadmcrowell/course/cka&#34; target=&#34;_blank&#34;&gt;https://killercoda.com/chadmcrowell/course/cka&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;1-single-node-cluster&#34;&gt;1. Single Node Cluster&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-two-node-cluster&#34;&gt;2. Two Node Cluster&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;3-quick-ssh-check-and-restart-kubelet&#34;&gt;3. Quick SSH: Check and Restart kubelet&lt;/h2&gt;&#xA;&lt;p&gt;Practiced:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SSH into a worker node (node01 )&lt;/li&gt;&#xA;&lt;li&gt;Checking kubelet status&lt;/li&gt;&#xA;&lt;li&gt;Restarting kubelet to restore node health&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh node01&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status kubelet -n &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start kubelet&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status kubelet -n &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;---lesson-learned&#34;&gt;-  Lesson learned&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;check kubelet log &lt;code&gt;sudo systemctl status kubelet -n 20&lt;/code&gt; or &lt;code&gt;kubelet&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;4-kubernetes-pki-essentials&#34;&gt;4. Kubernetes PKI Essentials&lt;/h2&gt;&#xA;&lt;p&gt;Practiced:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Killercoda Cka by Alexis Carbillet</title>
       <link>/posts/killercoda-cka-by-alexis-carbillet/</link>
