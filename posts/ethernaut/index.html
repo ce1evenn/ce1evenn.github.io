@@ -20,7 +20,7 @@
 
 
 
-<script defer language="javascript" type="text/javascript" src="/js/bundle.min.7750550c0319f5de56d916b91e642bf72a5bd09ee50b201dc2ed9db69d6177a8.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.d451ff92e80abc2a828eb9bb262e4db374bd4e954642f9245c54eec84bf690f3.js"></script>
 
 
 
@@ -99,13 +99,13 @@
 
 
 
-<meta name="generator" content="Hugo 0.148.0">
+<meta name="generator" content="Hugo 0.152.2">
 
 
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.1c6f56a6497e1d68469eb2a7efcf2b145601a94408f411014a7af5ffc3a73522.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.607435cac0c3b4b44373c5634a7dd4f3b5b8f756061890d922e60e385c6d551f.css">
 
 
     
@@ -301,7 +301,7 @@
         <p class="footnote">
 powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
     <br>
-    &copy; 2025 . All rights reserved.
+    &copy; 2026 . All rights reserved.
 </p>
 
   </div>
@@ -355,7 +355,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <li><a href="https://docs.soliditylang.org/en/develop/index.html" target="_blank">soliditylang</a></li>
 </ul>
 <blockquote>
-<p>Ethernaut, a CTF-like smart contract security challenge writeup</p></blockquote>
+<p>Ethernaut, a CTF-like smart contract security challenge writeup</p>
+</blockquote>
 <h2 id="1-ethernaut0---hello-ethernaut">1. Ethernaut0 - Hello Ethernaut</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#75715e">// SPDX-License-Identifier: MIT
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pragma solidity</span> <span style="color:#f92672">^</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>.<span style="color:#ae81ff">0</span>;
@@ -675,9 +676,11 @@ Annoyed</p>
 </span></span></code></pre></div><h3 id="51-solution">5.1 Solution</h3>
 <p><strong>tx.origin vs msg.sender</strong></p>
 <blockquote>
-<p>tx.origin: address of the EOA (externally ownder account)</p></blockquote>
+<p>tx.origin: address of the EOA (externally ownder account)</p>
+</blockquote>
 <blockquote>
-<p>msg.sender: address that currenlty executing the contract</p></blockquote>
+<p>msg.sender: address that currenlty executing the contract</p>
+</blockquote>
 <p><strong>WRONG</strong>
 
 
